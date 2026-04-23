@@ -129,7 +129,40 @@ void binarysearch(int key)
         printf("%d not found.", key);
 }
 
+void hashfunction()
+{
+    for (int i = 0; i < 100; i++)
+        hashArray[i] = -1;
+
+    for (int i = 0; i < size; i++)
+    {
+        int index = Array[i] % 100;
+        while (hashArray[index] != -1)
+        {
+            index = (index + 1) % 100;
+        }
+        hashArray[index] = Array[i];
+    }
+}
+
 void hash_search(int key)
 {
-    printf("Not yet implemented");
+    int index = key % 100;
+    int start = index;
+    int found = 0;
+
+    while (hashArray[index] != -1)
+    {
+        if (hashArray[index] == key)
+        {
+            printf("%d found in hash table at index %d.", key, index);
+            found = 1;
+            break;
+        }
+        index = (index + 1) % 100;
+        if (index == start)
+            break;
+    }
+    if (!found)
+        printf("%d not found in hash table.", key);
 }
