@@ -2,13 +2,13 @@ ICS 2105 Search Algorithms Assignment
 
 Group Members:
 
-Onyango Marikus Munda - SCT221-0120/2024
+1. Onyango Marikus Munda - SCT221-0120/2024
 
-Anilov Githua Maina - SCT221-0084/2024
+2. Anilov Githua Maina - SCT221-0084/2024
 
-Amani Mwale Wasonga - SCT221-0104/2024
+3. Amani Mwale Wasonga - SCT221-0104/2024
 
-Ian Maina - SCT221-0106/2024
+4. Ian Maina - SCT221-0106/2024
 
 Algorithm Comparison:
 During testing, all algorithms returned 0.000000s. This is because the array size (100) is too small for the CPU to measure in seconds.
