@@ -91,9 +91,42 @@ void linearsearch(int key)
         printf("%d not found.", key);
 }
 
+void sort()
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (Array[j] > Array[j + 1])
+            {
+                int temp = Array[j];
+                Array[j] = Array[j + 1];
+                Array[j + 1] = temp;
+            }
+        }
+    }
+}
+
 void binarysearch(int key)
 {
-    printf("Not yet implemented");
+    sort();
+    int low = 0, high = size - 1, mid, found = 0;
+    while (low <= high)
+    {
+        mid = low + (high - low) / 2;
+        if (Array[mid] == key)
+        {
+            printf("%d found in sorted array.", key);
+            found = 1;
+            break;
+        }
+        if (Array[mid] < key)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+    if (!found)
+        printf("%d not found.", key);
 }
 
 void hash_search(int key)
